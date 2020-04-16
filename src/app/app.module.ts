@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { NotesComponent } from './notes/notes.component';
@@ -21,12 +21,17 @@ import { NoteFullTextComponent } from './notes/note-full-text/note-full-text.com
     NoteComponent,
     NotesControlsComponent,
     NoteFormComponent,
-    NoteFullTextComponent
+    NoteFullTextComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot([
+      { path: '', component: LoginComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'notes', component: NoteComponent },
+    ]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
