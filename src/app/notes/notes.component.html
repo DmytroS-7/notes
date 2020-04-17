@@ -1,1 +1,5 @@
-<p>notes works!</p>
+<ul>
+  <li *ngFor="let note of notes">
+    <strong>{{ note.title }}</strong> {{ note.text }}
+  </li>
+</ul>

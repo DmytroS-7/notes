@@ -28,7 +28,7 @@ import { NoteFullTextComponent } from './notes/note-full-text/note-full-text.com
     RouterModule.forRoot([
       { path: '', component: LoginComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'notes', component: NoteComponent },
+      { path: 'notes', component: NotesComponent },
     ]),
   ],
   providers: [],
