@@ -1,5 +1,20 @@
-<ul>
-  <li *ngFor="let note of notes">
-    <strong>{{ note.title }}</strong> {{ note.text }}
-  </li>
-</ul>
+<div class="container">
+  <div class="row py-5">
+    <div class="col-lg-3 col-xs-12"></div>
+    <div class="col-lg-9 col-xs-12">
+      <div class="row">
+        <div
+          *ngFor="let note of notes"
+          class="col-lg-6 col-md-6 col-xs-12 py-3"
+        >
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-nowrap">{{ note.title }}</h5>
+              <p>{{ note.text }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
